@@ -1,1 +1,111 @@
-# 2048919461.github.io
+[dxstjjm.html](https://github.com/user-attachments/files/22398678/dxstjjm.html)
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆虫介绍</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #3498db;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #e74c3c;
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: #fff8e1;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #aaa, transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>昆虫介绍</h1>
+
+        <h2>黄钩蛱蝶</h2>
+        <p>我们作品中涉及的昆虫是黄钩蛱蝶和七星瓢虫。</p>
+        <p>其中黄钩蛱蝶又名葎胥是鳞翅目，蛱蝶科，蛱蝶亚科，钩蛱蝶属，黄钩蛱蝶种。</p>
+
+        <h3>-生活习性与外形特征</h3>
+        <p>其生长阶段分为卵，幼虫，蛹，成虫。</p>
+        <p>其卵为瓜形，绿色。</p>
+        <p>其幼虫为五龄虫，一龄无枝刺，仅黑褐色刚毛，2龄开始出现枝刺，3龄后中，后胸及腹部多节亚背线上枝刺变黄褐色，4龄个体节背后中线枝刺同样变黄褐色，5龄时所有体节枝刺均呈黄褐色。初孵化幼虫有啃食卵壳的现象，但是一般不吃光，主要啃食寄葎草等寄主植物（画面中的植物就是葎草），幼虫在老熟到一定程度后会结蛹。</p>
+        <p>其蛹体色为土褐色，顶部有尖突，侧部两突起呈钝角，胸背有纵向大尖突。腹背各节均有两尖突排成两列，仅第1对尖突和后胸背面有2块银斑闪光。触角褐白相间，横纹明显。在北方地区蛹通常一年1到2代，且最后一代在深秋羽化。</p>
+        <p>其成虫整体呈黄褐色，翅反面暗黄褐色，触角球棒状，正面黑褐、底面灰白，顶端黄褐前足退化，足部具钩刺，适合停歇在植物上。翅膀结构前翅外缘黑褐，中部孤形内凹，亚缘有黑褐色波纹，翅面有9个黑斑。此种蝴蝶喜进食花蜜和水果或树木的汁液，以成虫过冬，因此会在深秋羽化。</p>
+
+        <h3>-生活环境</h3>
+        <ul>
+            <li>常见于草地、田边、路边荒地，这些地方有充足的阳光和草本植物，利于成虫活动和幼虫取食。 也会出现在林缘、灌木丛边缘，既保证一定遮荫，又不缺开阔空间，符合其不喜浓密密林的习性。</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>七星瓢虫</h2>
+        <p>七星瓢虫是一种常见且重要的昆虫，以下是从目、科、属、种到外形、生活习性等方面的介绍：</p>
+
+        <h3>- 分类地位属于昆虫纲鞘翅目瓢甲科瓢虫属，种为七星瓢虫。</h3>
+
+        <h3>- 外形特征：</h3>
+        <p>成虫身体卵圆形，背部拱起呈水瓢状。头黑色，复眼黑色，内侧凹入处各有1淡黄色点。触角褐色，口器黑色。前胸背板黑，前上角各有1个较大的近方形的淡黄地。小盾片黑色。鞘翅红色或橙黄色，两侧共有7个黑斑，翅基部在小盾片两侧各有1个三角形白地。体腹及足黑色。</p>
+
+        <h3>- 生活习性：</h3>
+        <p>七星瓢虫为完全变态发育，一生经历卵、幼虫、蛹、成虫四个阶段。成虫和幼虫主要捕食蚜虫、介壳虫等农业害虫。它们白天活跃，夜间多不活动，有假死性，遇侵袭时会分泌黄色怪味液体防御。七星瓢虫是迁飞性昆虫，成虫飞翔力较强，有迁向气候凉爽的山丘越夏习性，冬季则在干燥、温暖的枯枝落叶下等地越冬。</p>
+
+        <h3>- 生活环境：</h3>
+        <p>栖息环境广阔，只要有大量蚜虫等猎物的地方，就能发现它们。</p>
+    </div>
+</body>
+</html>
