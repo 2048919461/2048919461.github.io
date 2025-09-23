@@ -3,108 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>昆虫介绍</title>
+    <title>昆虫介绍 - 黄钩蛱蝶与七星瓢虫</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 900px;
-            margin: 0 auto;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 20px;
-            background-color: #f5f5f5;
+            min-height: 100vh;
         }
 
         .container {
+            max-width: 1100px;
+            margin: 0 auto;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            padding: 25px;
-            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
         }
 
         h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .insect-section {
+            margin-bottom: 50px;
+            padding: 25px;
+            border-radius: 10px;
+            background: #f9f9f9;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         h2 {
             color: #3498db;
-            border-left: 4px solid #3498db;
-            padding-left: 10px;
-            margin-top: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin: 25px 0 20px;
+            font-size: 1.8rem;
         }
 
         h3 {
             color: #e74c3c;
-            margin-top: 20px;
+            margin: 20px 0 15px;
+            font-size: 1.4rem;
+            border-bottom: 2px dashed #e74c3c;
+            padding-bottom: 8px;
         }
 
         p {
-            margin: 10px 0;
+            margin: 15px 0;
+            text-align: justify;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 25px;
+            margin: 15px 0;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+            li:before {
+                content: "•";
+                color: #3498db;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        .image-container, .video-container {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.3s ease;
+            }
+
+                .image-container img:hover {
+                    transform: scale(1.03);
+                }
+
+            .video-container video {
+                width: 100%;
+                height: auto;
+                display: block;
+                background: #000;
+            }
+
+        .media-caption {
+            background: rgba(52, 152, 219, 0.9);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
         }
 
         .highlight {
             background-color: #fff8e1;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #ffc107;
-            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #ffc107;
+            margin: 20px 0;
+            font-style: italic;
         }
 
         .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #aaa, transparent);
-            margin: 30px 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #3498db, transparent);
+            margin: 40px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .video-error {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .media-container {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>昆虫介绍</h1>
+        <header>
+            <h1>昆虫科普知识</h1>
+            <div class="subtitle">探索黄钩蛱蝶与七星瓢虫的奇妙世界</div>
+        </header>
 
-        <h2>黄钩蛱蝶</h2>
-        <p>我们作品中涉及的昆虫是黄钩蛱蝶和七星瓢虫。</p>
-        <p>其中黄钩蛱蝶又名葎胥是鳞翅目，蛱蝶科，蛱蝶亚科，钩蛱蝶属，黄钩蛱蝶种。</p>
+        <div class="content">
+            <div class="insect-section">
+                <h2>黄钩蛱蝶</h2>
 
-        <h3>-生活习性与外形特征</h3>
-        <p>其生长阶段分为卵，幼虫，蛹，成虫。</p>
-        <p>其卵为瓜形，绿色。</p>
-        <p>其幼虫为五龄虫，一龄无枝刺，仅黑褐色刚毛，2龄开始出现枝刺，3龄后中，后胸及腹部多节亚背线上枝刺变黄褐色，4龄个体节背后中线枝刺同样变黄褐色，5龄时所有体节枝刺均呈黄褐色。初孵化幼虫有啃食卵壳的现象，但是一般不吃光，主要啃食寄葎草等寄主植物（画面中的植物就是葎草），幼虫在老熟到一定程度后会结蛹。</p>
-        <p>其蛹体色为土褐色，顶部有尖突，侧部两突起呈钝角，胸背有纵向大尖突。腹背各节均有两尖突排成两列，仅第1对尖突和后胸背面有2块银斑闪光。触角褐白相间，横纹明显。在北方地区蛹通常一年1到2代，且最后一代在深秋羽化。</p>
-        <p>其成虫整体呈黄褐色，翅反面暗黄褐色，触角球棒状，正面黑褐、底面灰白，顶端黄褐前足退化，足部具钩刺，适合停歇在植物上。翅膀结构前翅外缘黑褐，中部孤形内凹，亚缘有黑褐色波纹，翅面有9个黑斑。此种蝴蝶喜进食花蜜和水果或树木的汁液，以成虫过冬，因此会在深秋羽化。</p>
+                <div class="media-container">
+                    <div class="image-container">
+                        <img src="黄钩蛱蝶.jpg" alt="黄钩蛱蝶图片" onerror="this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect fill=%22%23f0f0f0%22 width=%22300%22 height=%22200%22/><text fill=%22%23999%22 font-family=%22Arial%22 font-size=%2218%22 x=%22150%22 y=%22100%22 text-anchor=%22middle%22>黄钩蛱蝶图片</text></svg>'">
+                        <div class="media-caption">黄钩蛱蝶成虫</div>
+                    </div>
+                    <div class="video-container">
+                        <video controls poster="黄钩蛱蝶.jpg" onerror="handleVideoError(this)">
+                            <source src="黄钩蛱蝶.mp4" type="video/mp4">
+                            <source src="黄钩蛱蝶.webm" type="video/webm">
+                            您的浏览器不支持视频播放。
+                        </video>
+                        <div class="media-caption">黄钩蛱蝶科普视频</div>
+                        <div class="video-error" style="display: none;" id="video-error-1">
+                            视频加载失败，请检查文件路径或格式。
+                        </div>
+                    </div>
+                </div>
+               
+                <p>黄钩蛱蝶，又名葎胥是鳞翅目，蛱蝶科，蛱蝶亚科，钩蛱蝶属，黄钩蛱蝶种。</p>
 
-        <h3>-生活环境</h3>
-        <ul>
-            <li>常见于草地、田边、路边荒地，这些地方有充足的阳光和草本植物，利于成虫活动和幼虫取食。 也会出现在林缘、灌木丛边缘，既保证一定遮荫，又不缺开阔空间，符合其不喜浓密密林的习性。</li>
-        </ul>
+                <h3>生活习性与外形特征</h3>
+                <p>其生长阶段分为卵，幼虫，蛹，成虫。</p>
+                <p>其卵为瓜形，绿色。</p>
+                <p>其幼虫为五龄虫，一龄无枝刺，仅黑褐色刚毛，2龄开始出现枝刺，3龄后中，后胸及腹部多节亚背线上枝刺变黄褐色，4龄个体节背后中线枝刺同样变黄褐色，5龄时所有体节枝刺均呈黄褐色。初孵化幼虫有啃食卵壳的现象，但是一般不吃光，主要啃食寄葎草等寄主植物（画面中的植物就是葎草），幼虫在老熟到一定程度后会结蛹。</p>
+                <p>其蛹体色为土褐色，顶部有尖突，侧部两突起呈钝角，胸背有纵向大尖突。腹背各节均有两尖突排成两列，仅第1对尖突和后胸背面有2块银斑闪光。触角褐白相间，横纹明显。在北方地区蛹通常一年1到2代，且最后一代在深秋羽化。</p>
+                <p>其成虫整体呈黄褐色，翅反面暗黄褐色，触角球棒状，正面黑褐、底面灰白，顶端黄褐前足退化，足部具钩刺，适合停歇在植物上。翅膀结构前翅外缘黑褐，中部孤形内凹，亚缘有黑褐色波纹，翅面有9个黑斑。此种蝴蝶喜进食花蜜和水果或树木的汁液，以成虫过冬，因此会在深秋羽化。</p>
 
-        <div class="section-divider"></div>
+                <h3>生活环境</h3>
+                <ul>
+                    <li>常见于草地、田边、路边荒地，这些地方有充足的阳光和草本植物，利于成虫活动和幼虫取食。</li>
+                    <li>也会出现在林缘、灌木丛边缘，既保证一定遮荫，又不缺开阔空间，符合其不喜浓密密林的习性。</li>
+                </ul>
+            </div>
 
-        <h2>七星瓢虫</h2>
-        <p>七星瓢虫是一种常见且重要的昆虫，以下是从目、科、属、种到外形、生活习性等方面的介绍：</p>
+            <div class="section-divider"></div>
 
-        <h3>- 分类地位属于昆虫纲鞘翅目瓢甲科瓢虫属，种为七星瓢虫。</h3>
+            <div class="insect-section">
+                <h2>七星瓢虫</h2>
 
-        <h3>- 外形特征：</h3>
-        <p>成虫身体卵圆形，背部拱起呈水瓢状。头黑色，复眼黑色，内侧凹入处各有1淡黄色点。触角褐色，口器黑色。前胸背板黑，前上角各有1个较大的近方形的淡黄地。小盾片黑色。鞘翅红色或橙黄色，两侧共有7个黑斑，翅基部在小盾片两侧各有1个三角形白地。体腹及足黑色。</p>
+                <div class="media-container">
+                    <div class="image-container">
+                        <img src="七星瓢虫.png" alt="七星瓢虫图片" onerror="this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect fill=%22%23f0f0f0%22 width=%22300%22 height=%22200%22/><text fill=%22%23999%22 font-family=%22Arial%22 font-size=%2218%22 x=%22150%22 y=%22100%22 text-anchor=%22middle%22>七星瓢虫图片</text></svg>'">
+                        <div class="media-caption">七星瓢虫成虫</div>
+                    </div>
+                    <div class="video-container">
+                        <video controls poster="七星瓢虫.png" onerror="handleVideoError(this)">
+                            <source src="七星瓢虫.mp4" type="video/mp4">
+                            <source src="七星瓢虫.webm" type="video/webm">
+                            您的浏览器不支持视频播放。
+                        </video>
+                        <div class="media-caption">七星瓢虫科普视频</div>
+                        <div class="video-error" style="display: none;" id="video-error-2">
+                            视频加载失败，请检查文件路径或格式。
+                        </div>
+                    </div>
+                </div>
 
-        <h3>- 生活习性：</h3>
-        <p>七星瓢虫为完全变态发育，一生经历卵、幼虫、蛹、成虫四个阶段。成虫和幼虫主要捕食蚜虫、介壳虫等农业害虫。它们白天活跃，夜间多不活动，有假死性，遇侵袭时会分泌黄色怪味液体防御。七星瓢虫是迁飞性昆虫，成虫飞翔力较强，有迁向气候凉爽的山丘越夏习性，冬季则在干燥、温暖的枯枝落叶下等地越冬。</p>
+                <p>七星瓢虫是一种常见且重要的昆虫，以下是从目、科、属、种到外形、生活习性等方面的介绍：</p>
 
-        <h3>- 生活环境：</h3>
-        <p>栖息环境广阔，只要有大量蚜虫等猎物的地方，就能发现它们。</p>
+                <h3>分类地位</h3>
+                <p>属于昆虫纲鞘翅目瓢甲科瓢虫属，种为七星瓢虫。</p>
+
+                <h3>外形特征</h3>
+                <p>成虫身体卵圆形，背部拱起呈水瓢状。头黑色，复眼黑色，内侧凹入处各有1淡黄色点。触角褐色，口器黑色。前胸背板黑，前上角各有1个较大的近方形的淡黄地。小盾片黑色。鞘翅红色或橙黄色，两侧共有7个黑斑，翅基部在小盾片两侧各有1个三角形白地。体腹及足黑色。</p>
+
+                <h3>生活习性</h3>
+                <p>七星瓢虫为完全变态发育，一生经历卵、幼虫、蛹、成虫四个阶段。成虫和幼虫主要捕食蚜虫、介壳虫等农业害虫。它们白天活跃，夜间多不活动，有假死性，遇侵袭时会分泌黄色怪味液体防御。七星瓢虫是迁飞性昆虫，成虫飞翔力较强，有迁向气候凉爽的山丘越夏习性，冬季则在干燥、温暖的枯枝落叶下等地越冬。</p>
+
+                <h3>生活环境</h3>
+                <p>栖息环境广阔，只要有大量蚜虫等猎物的地方，就能发现它们。</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>破茧成蝶 &copy; 2025 - 探索自然界的奇妙生物</p>
+        </footer>
     </div>
+
+    <script>
+        // 处理视频加载错误
+        function handleVideoError(videoElement) {
+            console.error('视频加载失败:', videoElement.src);
+            
+            // 显示错误信息
+            const container = videoElement.parentElement;
+            const errorDiv = container.querySelector('.video-error');
+            if (errorDiv) {
+                errorDiv.style.display = 'block';
+            }
+            
+            // 尝试使用备用图片替代
+            const poster = videoElement.getAttribute('poster');
+            if (poster) {
+                const img = document.createElement('img');
+                img.src = poster;
+                img.alt = '视频内容图片';
+                img.style.width = '100%';
+                img.style.height = 'auto';
+                
+                // 替换视频元素
+                videoElement.parentElement.replaceChild(img, videoElement);
+            }
+        }
+        
+        // 页面加载完成后检查视频状态
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                video.addEventListener('error', function() {
+                    handleVideoError(this);
+                });
+                
+                // 检查视频是否可播放
+                video.addEventListener('canplay', function() {
+                    console.log('视频可以播放:', this.src);
+                    const errorDiv = this.parentElement.querySelector('.video-error');
+                    if (errorDiv) {
+                        errorDiv.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
